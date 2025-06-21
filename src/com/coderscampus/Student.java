@@ -47,17 +47,13 @@ public class Student implements Comparable<Student> {
 
     @Override
     public String toString () {
-            return (" StudentId: " + studentId + " StudentName: " + studentName + " Course: " + course + " Grade: " + grade);
+            return studentId + "," + studentName + "," + course + "," + grade;
     }
 
     @Override
     public int compareTo (Student other){
         int gradeCompare = Integer.compare(other.grade, this.grade);
         return gradeCompare != 0 ? gradeCompare : Integer.compare(other.studentId, this.studentId);
-    }
-
-    public String toCSV () {
-        return  studentId + "," + studentName + "," + course + "," + grade;
     }
 }
 
